@@ -4,7 +4,7 @@ node {
       git 'https://github.com/fantasy130/computer_sb.git'
    }
    stage('Build') {
-            shell "mvn  -Dmaven.test.failure.ignore clean package"
+            shell "mvn  -Dmaven.test.failure.ignore clean install"
         }
    stage('Results') {
      // junit '**/target/surefire-reports/TEST-*.xml'
